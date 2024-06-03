@@ -148,7 +148,7 @@ namespace Utilities
         {
             TextObject[] letters = new TextObject[16];
             TextObject obj;
-            int num = 0;
+            int num = 8;
             char let = 'a';
             int x = -border;
             int y = 0;
@@ -157,17 +157,17 @@ namespace Utilities
                 obj = getText(x, y, 0, y + SQUARE_SIZE, num.ToString());
                 letters[i] = obj;
                 y += SQUARE_SIZE;
-                num++;
+                num--;
             }
             x = 0; num = 0;
             for (int i = 8; i < 16; i++)
             {
-                //obj = getText(x, y, x + SQUARE_SIZE, y + border, let.ToString());
-                obj = getText(x, y, x + SQUARE_SIZE, y + border, num.ToString());
+                obj = getText(x, y, x + SQUARE_SIZE, y + border, let.ToString());
+                //obj = getText(x, y, x + SQUARE_SIZE, y + border, num.ToString());
                 letters[i] = obj;
                 x += SQUARE_SIZE;
-                num++;
-                //let++;
+                //num++;
+                let++;
             }
             return letters;
         }

@@ -98,7 +98,7 @@ namespace oop2
                 }
 
                 byte[] recieve = new byte[1];
-                Thread.Sleep(500);
+                Thread.Sleep(1000);
                 await stream.ReadAsync(recieve);
                 playerColor = (char)recieve[0];
 

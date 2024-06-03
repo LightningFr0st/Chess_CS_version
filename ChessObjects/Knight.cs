@@ -28,7 +28,6 @@ namespace Chess
                     AttackedCells.Add((cpi, cpj));
                     if (capture_board[cpi, cpj] != myIND)
                         Moves.Add((cpi, cpj));
-
                 }
             }
         }
