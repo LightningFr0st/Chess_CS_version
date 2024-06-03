@@ -77,10 +77,10 @@ namespace Chess
 
             for (int i = 0; i < enemy.Count; i++)
             {
-                if (enemy[i] is King)
-                {
-                    player[i].updateMoves(capture_board);
-                }
+                //if (enemy[i] is King)
+                //{
+                //    enemy[i].updateMoves(capture_board);
+                //}
                 enemy[i].updateMoves(capture_board);
             }
             UpdateCaptureBoards();
