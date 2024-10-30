@@ -178,11 +178,11 @@ namespace Chess
             {
                 ChessObject? target = enemy.SingleOrDefault(x => x.i == cur_piece.i && x.j == cur_piece.j);
                 enemy.Remove(target);
-                PlaySound.URL = @"assets\sound\capture.mp3";
+                PlaySound.URL = @"D:\University\4\project\Chess\assets\sound\capture.mp3";
             }
             else
             {
-                PlaySound.URL = @"assets\sound\move.mp3";
+                PlaySound.URL = @"D:\University\4\project\Chess\assets\sound\move.mp3";
             }
             capture_board[cur_piece.i, cur_piece.j] = 1;
 
@@ -212,7 +212,7 @@ namespace Chess
             {
                 check_cell = board[enemy_king.i, enemy_king.j];
                 check_cell.ReverseColor();
-                PlaySound.URL = @"assets\sound\capture.mp3";
+                PlaySound.URL = @"D:\University\4\project\Chess\assets\sound\capture.mp3";
             }
 
         }
@@ -226,11 +226,11 @@ namespace Chess
             {
                 ChessObject take = player.Single(x => x.i == i2 && x.j == j2);
                 player.Remove(take);
-                PlaySound.URL = @"assets\sound\capture.mp3";
+                PlaySound.URL = @"D:\University\4\project\Chess\assets\sound\capture.mp3";
             }
             else
             {
-                PlaySound.URL = @"assets\sound\move.mp3";
+                PlaySound.URL = @"D:\University\4\project\Chess\assets\sound\move.mp3";
             }
 
             capture_board[target.i, target.j] = 0;
@@ -269,7 +269,7 @@ namespace Chess
                 {
                     game_over = true;
                 }
-                PlaySound.URL = @"assets\sound\capture.mp3";
+                PlaySound.URL = @"D:\University\4\project\Chess\assets\sound\capture.mp3";
             }
         }
 

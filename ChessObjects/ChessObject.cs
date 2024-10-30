@@ -21,7 +21,7 @@ namespace Chess
         protected string type;
         protected string color;
         public bool isMine;
-        private static string txtrDir = System.IO.Path.GetFullPath(System.IO.Path.Combine(Environment.CurrentDirectory, @".\assets\"));
+        private static string txtrDir = System.IO.Path.GetFullPath(System.IO.Path.Combine(Environment.CurrentDirectory, @"..\..\..\assets\"));
         public List<(int, int)> Moves = new List<(int, int)>();
         public List<(int, int)> AttackedCells = new List<(int, int)>();
 

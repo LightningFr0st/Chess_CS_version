@@ -60,6 +60,7 @@ namespace oop2
                     client = await host.AcceptTcpClientAsync();
                     stream = client.GetStream();
                 }
+
                 byte[] send = new byte[1];
                 if (playerColor == 'w')
                 {
@@ -445,7 +446,7 @@ namespace oop2
             return menu;
         }
 
-        private void BackToMenu()
+        private void TurnOff()
         {
             stream.Dispose();
             stream.Close();
@@ -461,6 +462,11 @@ namespace oop2
                 host.Stop();
                 host = null;
             }
+        }
+
+        private void BackToMenu()
+        {
+            TurnOff();
 
             chess_board = null;
             game_ended = false;
@@ -485,7 +491,6 @@ namespace oop2
             YesBtn.clickHandler = () =>
             {
                 SendMessage('Y');
-
                 StartGame();
             };
 

@@ -23,7 +23,7 @@ namespace Utilities
 
         private static int border;
 
-        private static string txtrDir = System.IO.Path.GetFullPath(System.IO.Path.Combine(Environment.CurrentDirectory, @".\assets\"));
+        private static string txtrDir = System.IO.Path.GetFullPath(System.IO.Path.Combine(Environment.CurrentDirectory, @"..\..\..\assets\"));
 
         delegate ChessObject GetChessPiece(int x1, int y1, int x2, int y2, string typem, bool isMine);
         private static GetChessPiece[] genDelegates = [getRook, getKnight, getBishop, getQueen, getKing, getPawn];
